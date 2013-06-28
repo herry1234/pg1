@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.herry.example"
+        versionCode="10" 
+        version   = "0.0.2">
+    
+    <name>My Vibrate Example</name>
+
+    <description>
+        A dump  phonegap app
+    </description>
+
+    <author href="http://www.test.com" email="tech.herry@gmail.com">
+        Herry Wang
+    </author>
+
+</widget>
