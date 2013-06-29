@@ -1,3 +1,0 @@
-{"ts":1372315117550,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
-{"contributors":[],"silentsave":false,"ts":1372315121755,"patch":[[{"diffs":[[1,"{\n    \"some\": \"stuff\"\n}"]],"start1":0,"start2":0,"length1":0,"length2":23}]],"length":23,"saved":false}
-{"contributors":[],"silentsave":false,"ts":1372459683016,"patch":[[{"diffs":[[0,"   \""],[-1,"so"],[1,"na"],[0,"me\": \""],[-1,"stuff"],[1,"Herry"],[0,"\"\n}"]],"start1":3,"start2":3,"length1":20,"length2":20}]],"length":23,"saved":false}
