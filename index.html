@@ -1,31 +1,77 @@
 <!DOCTYPE html>
 <html>
+    
     <head>
-		<title>Testing Responsive Design</title>
-        <link rel="stylesheet" href="reset.css" />
+        <title>Testing Responsive Design</title>
+        <link rel="stylesheet" href="reset.css"
+        />
         <link rel="stylesheet" href="main.css" />
-       
-	</head>
-	<body>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script>
+            var APP_PRODUCTION_TYPE = null;
+            /*
+				1 >  phone gap in production
+				2 >  HTML5 app in domain name production
+				3 >  Phonegap in development (ripple emulator)
+				4 >  HTML5 dev env
+			*/
+
+            if (location.protocol === "file:") {
+                APP_PRODUCTION_TYPE = 1;
+                alert("type 1");
+                document.write("<script src='phonegap.js'></script" + ">");
+                /*
+					this file should not actually exist in your repo 
+				 		it is injected when needed by build
+				*/
+            }
+            else {
+                alert("type 2");
+                if (location.host !== "localhost:9000") {
+                    APP_PRODUCTION_TYPE = 3;
+                    document.write("<script src='ripple.phonegap.js'></script" + ">");
+                }
+                else {
+                    if (window.top.ripple) {
+                        document.write("<script src='ripple.phonegap.js'></script" + ">");
+                        APP_PRODUCTION_TYPE = 3;
+                    }
+                    else {
+                        APP_PRODUCTION_TYPE = 4;
+                    }
+                }
+            }
+
+            alert("type " + APP_PRODUCTION_TYPE);
+            alert("location " + location.host);
+        </script>
+        <script>
+            if (APP_PRODUCTION_TYPE === 3) {
+                alert("type 3");
+                //document.write("<link rel='stylesheet' href='styles/ripple.css' /" + ">");
+            }
+        </script>
+        <script src="jquery.js"></script>
+    </head>
+    
+    <body>
         <section>
             <header>
                 <h1>Vibrate App</h1>
             </header>
             <section>
                 <form>
-                    <input type= "range" min="1" max="5" value= "2"></input>
-                    <p> <output>2</output> seconds</p>
-                    <input type="submit" value="haha"> shake me </input>
+                    <input type="range" min="1" max="5" value="2"></input>
+                    <p>
+                        <output>2</output>seconds</p>
+                    <input type="submit" value="haha">shake me</input>
                 </form>
             </section>
-
             <footer>
                 <p>&copy; copy herry</p>
             </footer>
         </section>
-
-        <script src="jquery.js"></script>
-        <script src="ripple.phonegap.js"></script>
         <script src="main.js"></script>
-	</body>
+    </body>
+
 </html>
