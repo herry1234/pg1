@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Testing Responsive Design</title>
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/main.css" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
+        <!-- meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" -->
+        <script>
+            var APP_PRODUCTION_TYPE = null;
+            /*
+				1 >  phone gap in production
+				2 >  HTML5 app in domain name production
+				3 >  Phonegap in development (ripple emulator)
+				4 >  HTML5 dev env
+			*/
+
+            if (location.protocol === "file:") {
+                APP_PRODUCTION_TYPE = 1;
+                document.write("<script src='js/cordova.js'></script" + ">");
+                /*
+					this file should not actually exist in your repo 
+				 		it is injected when needed by build
+				*/
+            }
+            else {
+                if (location.host !== "localhost:9000") {
+                    APP_PRODUCTION_TYPE = 2;
+                    document.write("<script src='ripple.phonegap.js'></script" + ">");
+                }
+                else {
+                    if (window.top.ripple) {
+                        document.write("<script src='ripple.phonegap.js'></script" + ">");
+                        APP_PRODUCTION_TYPE = 3;
+                    }
+                    else {
+                        APP_PRODUCTION_TYPE = 4;
+                    }
+                }
+            }
+        </script>
+        <script>
+            if (APP_PRODUCTION_TYPE === 3) {
+                //document.write("<link rel='stylesheet' href='styles/ripple.css' /" + ">");
+            }
+        </script>
+        <script src="js/jquery.js"></script>
+    </head>
+    
+    <body>
+        <section>
+            <header>
+                <h1>Vibrate App</h1>
+            </header>
+            <section>
+                <form>
+                    <input type="range" min="1" max="5" value="2"></input>
+                    <p>
+                        <output>2</output>seconds</p>
+                    <input type="submit" value="haha">shake me</input>
+                </form>
+            </section>
+            <footer>
+                <p>&copy; copy herry</p>
+            </footer>
+        </section>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
