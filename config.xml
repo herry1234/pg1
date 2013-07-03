@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.herry.example"
+        id        = "com.cisco.example"
         versionCode="10" 
         version   = "0.0.2">
     
@@ -11,7 +11,7 @@
         A dump  phonegap app
     </description>
 
-    <author href="http://www.test.com" email="tech.herry@gmail.com">
+    <author href="http://www.github.com" email="tech.herry@gmail.com">
         Herry Wang
     </author>
 
