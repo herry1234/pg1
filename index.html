@@ -29,11 +29,11 @@
                 if (location.host !== "localhost:9000") {
                     APP_PRODUCTION_TYPE = 2;
 
-                    document.write("<script src='ripple.phonegap.js'></script" + ">");
+                    document.write("<script src='js/ripple.phonegap.js'></script" + ">");
                 }
                 else {
                     if (window.top.ripple) {
-                        document.write("<script src='ripple.phonegap.js'></script" + ">");
+                        document.write("<script src='js/ripple.phonegap.js'></script" + ">");
                         APP_PRODUCTION_TYPE = 3;
                     }
                     else {
