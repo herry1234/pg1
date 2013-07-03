@@ -10,20 +10,20 @@
         <script>
             var APP_PRODUCTION_TYPE = null;
             /*
-				1 >  phone gap in production
-				2 >  HTML5 app in domain name production
-				3 >  Phonegap in development (ripple emulator)
-				4 >  HTML5 dev env
-			*/
+                1 >  phone gap in production
+                2 >  HTML5 app in domain name production
+                3 >  Phonegap in development (ripple emulator)
+                4 >  HTML5 dev env
+            */
 
             if (location.protocol === "file:") {
                 APP_PRODUCTION_TYPE = 1;
                 document.write("<script src='js/cordova.js'></script" + ">");
 
                 /*
-					this file should not actually exist in your repo 
-				 		it is injected when needed by build
-				*/
+                    this file should not actually exist in your repo 
+                        it is injected when needed by build
+                */
             }
             else {
                 if (location.host !== "localhost:9000") {
