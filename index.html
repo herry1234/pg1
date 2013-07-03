@@ -3,10 +3,17 @@
     
     <head>
         <title>Testing Responsive Design</title>
+<<<<<<< HEAD
         <link rel="stylesheet" href="css/reset.css"/>
         <link rel="stylesheet" href="css/main.css" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=device-dpi" />
         <!-- meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" -->
+=======
+        <link rel="stylesheet" href="reset.css"
+        />
+        <link rel="stylesheet" href="main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+>>>>>>> b0357430ead45d27f014e293a522c2952f880c05
         <script>
             var APP_PRODUCTION_TYPE = null;
             /*
@@ -18,15 +25,26 @@
 
             if (location.protocol === "file:") {
                 APP_PRODUCTION_TYPE = 1;
+<<<<<<< HEAD
                 document.write("<script src='js/cordova.js'></script" + ">");
+=======
+                alert("type 1");
+                document.write("<script src='phonegap.js'></script" + ">");
+>>>>>>> b0357430ead45d27f014e293a522c2952f880c05
                 /*
 					this file should not actually exist in your repo 
 				 		it is injected when needed by build
 				*/
             }
             else {
+<<<<<<< HEAD
                 if (location.host !== "localhost:9000") {
                     APP_PRODUCTION_TYPE = 2;
+=======
+                alert("type 2");
+                if (location.host !== "localhost:9000") {
+                    APP_PRODUCTION_TYPE = 3;
+>>>>>>> b0357430ead45d27f014e293a522c2952f880c05
                     document.write("<script src='ripple.phonegap.js'></script" + ">");
                 }
                 else {
@@ -39,6 +57,7 @@
                     }
                 }
             }
+<<<<<<< HEAD
         </script>
         <script>
             if (APP_PRODUCTION_TYPE === 3) {
@@ -46,6 +65,19 @@
             }
         </script>
         <script src="js/jquery.js"></script>
+=======
+
+            alert("type " + APP_PRODUCTION_TYPE);
+            alert("location " + location.host);
+        </script>
+        <script>
+            if (APP_PRODUCTION_TYPE === 3) {
+                alert("type 3");
+                //document.write("<link rel='stylesheet' href='styles/ripple.css' /" + ">");
+            }
+        </script>
+        <script src="jquery.js"></script>
+>>>>>>> b0357430ead45d27f014e293a522c2952f880c05
     </head>
     
     <body>
@@ -65,7 +97,11 @@
                 <p>&copy; copy herry</p>
             </footer>
         </section>
+<<<<<<< HEAD
         <script src="js/main.js"></script>
+=======
+        <script src="main.js"></script>
+>>>>>>> b0357430ead45d27f014e293a522c2952f880c05
     </body>
 
 </html>
