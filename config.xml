@@ -5,14 +5,17 @@
         versionCode="10" 
         version   = "0.0.2">
     
-    <name>My Vibrate Example</name>
+    <name>Herry's App</name>
 
     <description>
-        A dump  phonegap app
+        Herry's first mobile app using PhoneGap
     </description>
 
     <author href="http://www.github.com" email="tech.herry@gmail.com">
         Herry Wang
     </author>
+    <icon src="icon.png" />
+    <gap:splash src="img/logo.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="img/logo.png" gap:platform="android" gap:density="mdpi"/>
 
 </widget>

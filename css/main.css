@@ -1,5 +1,9 @@
 html, body{
     height: 100%;
+         font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 body > section{
     -webkit-transform: translate(0px, 0px) rotate(0deg);
@@ -47,9 +51,13 @@ body > section > footer{
 body > section > section{
     width: 100%;
     position: absolute;
+    background:url(../img/logo.png) no-repeat center; /* 170px x 200px */
     background-color: yellow;
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
     top: 44px;
+    height:0px;
     height: calc(100% - 88px);
     height: -webkit-calc(100% - 88px);
+        /** see android hack js **/
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
